@@ -1,5 +1,5 @@
 {
-    "name": "google/appengine-php-sdk",
+    "name": "albertcht/appengine-php-sdk",
     "description": "Google App Engine PHP SDK",
     "type": "library",
     "keywords": ["google", "appengine", "sdk"],
