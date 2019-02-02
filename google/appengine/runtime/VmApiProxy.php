@@ -40,7 +40,7 @@ class VmApiProxy extends ApiProxyBase{
   const SERVICE_ENDPOINT_HEADER = 'X-Google-RPC-Service-Endpoint';
   const SERVICE_METHOD_HEADER = 'X-Google-RPC-Service-Method';
   const RPC_CONTENT_TYPE = 'application/octet-stream';
-  const DEFAULT_TIMEOUT_SEC = 60;
+  const DEFAULT_TIMEOUT_SEC = 10;
   const DEADLINE_DELTA_SECONDS = 1;
 
   // Map of Rpc Error Codes to the corresponging runtime exception.
@@ -170,7 +170,7 @@ class VmApiProxy extends ApiProxyBase{
 
     // We silence the error here to prevent spamming the users application.
     // @codingStandardsIgnoreStart
-    $serialized_remote_respone = @file_get_contents($endpoint_url,
+    $serialized_remote_respone = file_get_contents($endpoint_url,
                                                     false,
                                                     $context);
     // @codingStandardsIgnoreEnd
